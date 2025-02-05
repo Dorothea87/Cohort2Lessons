@@ -64,7 +64,7 @@ if (percentageGrade > 100) {
 //Task 2
 //Use conditions to work out for a given age, what film ratings they can see
 
-val childAge: Int = 7
+val childAge: Int = 1
 
 if (childAge >= 18) {
   "You can watch all movies"
@@ -74,7 +74,9 @@ if (childAge >= 18) {
   "You can watch U, PG and 12A movies"
 } else if (childAge >= 8) {
   "You can watch U or PG movies"
-} else if (childAge >= 4) {
+} else if (childAge >= 4 && childAge >= 0) {
   "You can watch U movies"
-} else
+} else {
+  println(s"$childAge is too young to attend the cinema.")
+}
 
