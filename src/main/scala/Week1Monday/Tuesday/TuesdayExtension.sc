@@ -11,6 +11,7 @@
 //val numberOne: Int = one.toInt
 //println(numberOne)
 //this only works with a numeric string such as "1"
+// you can but you need to match the string to the number before and then call the variable
 
 /**
  * Exercise 3
@@ -23,6 +24,7 @@ println(str)
  * Exercise 4
  * I think you cannot directly convert a number to a string, you need to first store everything in variables before you can use an in-built method
  */
+//.toString will convert to "1" as a string, not the number
 
 /**
  * Exercise 5

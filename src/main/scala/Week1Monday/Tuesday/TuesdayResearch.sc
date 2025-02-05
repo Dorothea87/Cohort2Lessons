@@ -10,6 +10,7 @@
  * Exercise 2
  * we need to add another word in upper camel case in order to make the code run
  * by doing so we give it a unique name only assigned to this variable
+ * or wrap it in back ticks `` to make it protected
  */
 
 val newString: String = "Hello World!"

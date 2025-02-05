@@ -26,11 +26,13 @@
  * String:
  * a string is a data type that uses text
  * it is a scala object that is represented by a sequence of characters
+ * can store it in a variable and can access it again
  *
  * Println:
  * we pass values to the console through println
  * println computes a trailing newline, compared to just print
  * we can pass any type of argument to it, not just strings
+ * side effect = type unit
  */
 
 /**
