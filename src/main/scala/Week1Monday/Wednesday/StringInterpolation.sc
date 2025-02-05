@@ -50,7 +50,7 @@ println(raw"I'm going onto a \nnew line") //raw will ignore commands and print e
  */
 
 //1
- val name2: String = "Ash"
+val name2: String = "Ash"
 println(s"$name2 is older than $name")
 
 //2
