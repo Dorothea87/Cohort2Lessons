@@ -2,6 +2,7 @@
  * 1
  * The Scala documentation gives information on precedence: https://docs.scala-lang.org/tour/operators.html
  * The order is as follows:
+ * ()
  * * / %
  * + -
  * :
