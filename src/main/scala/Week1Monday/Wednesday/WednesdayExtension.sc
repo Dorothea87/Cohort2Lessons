@@ -22,5 +22,5 @@ true || false && false
 ((true || false) && false)
 
 //4 prediction: true
-//(1 < 4 && 7 != 10 || 9 + 10 == 21) => (1 < 4 && 7 != 10 || 19 == 21) => (1 < 4 && 7 != 10 || 19 == 21) => true && true || false => true || false +>true
+//(1 < 4 && 7 != 10 || 9 + 10 == 21) => (1 < 4 && 7 != 10 || 19 == 21) => (true && 7 != 10 || 19 == 21) => true && true || false => true || false =>true
 (1 < 4 && 7 != 10 || 9 + 10 == 21)
