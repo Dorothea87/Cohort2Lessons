@@ -41,7 +41,7 @@ val tripledList: List[Int] = firstList.map{
 }
 val tripledSeq: Seq[Int] = firstSeq.map{
   _ * 3
-} //bd practice to not name your data type
+} //bad practice to not name your data type
 
 val tripledMap: Map[String, Int] = firstMap.map {
   case (key, value) => (key, value * 3)
