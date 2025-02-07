@@ -166,8 +166,10 @@ emptyList
 // immutable because it is a val, can't update it, need a new value every single time
 
 val y: Seq[Int] = Seq(3, 4, 5)
+
 //Append(add to end)
 val appendY = y:+ 6
+
 //Prepend (add at beginning)
 val prependY = 2 +: appendY
 
