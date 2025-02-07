@@ -86,3 +86,17 @@ addTwoInts(1, 2) + addTwoInts(1, 2)
 6
 
 //Just something to bear in mind when writing more complex code. What is simpler for our brains?
+
+////Rounding to 2.d.p keeping as a double
+//val vat:Double = 1.2
+//def withVAT(price:Double):Double = {
+//  BigDecimal(price * vat).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+//}
+////convert to BigDecimal for correct rounding
+////2 - set the number of d.p.
+////BigDecimal.RoundingMode.HALF_UP - build in methods to tell compiler how to round. HALF_UP - round up if more than 5.
+////.toDouble - convert back to Double
+//
+////Proving it works
+//5.66 * 1.2
+//withVAT(5.66)
