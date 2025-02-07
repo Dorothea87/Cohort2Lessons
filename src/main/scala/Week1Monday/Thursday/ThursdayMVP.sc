@@ -17,9 +17,7 @@ val filteredSeq: Seq[String] = seqOfPrimaryColours.filter(
 //d) Write a function that returns ‘true’ if your Seq contains “Orange”.
 //val appendY = y:+ 6
 val extendedColours = seqOfPrimaryColours:+ "orange"
-val onangeIsNotPrimary: Boolean = extendedColours.exists(
-  word => word == "orange"
-)
+val onangeIsNotPrimary: Boolean = extendedColours.contains("orange")
 
 /** Task 2
  * Write a function that maps each value in your List to true or false, depending on whether they
