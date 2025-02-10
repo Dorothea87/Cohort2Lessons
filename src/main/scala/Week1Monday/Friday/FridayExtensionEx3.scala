@@ -5,7 +5,9 @@
  b. See the final grade printed to the terminal as a whole number. */
 
 package Week1Monday.Friday
+
 import scala.io.StdIn.readLine
+
 object FridayExtensionEx3 extends App {
 
   println("Please enter your score for History:")

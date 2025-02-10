@@ -19,11 +19,11 @@ val numbers: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 def sumOfOddAndSquared(numberList:List[Int]): Int = {
   val oddSquare = for {
-    numberList <- numberList
-    squaredNumbers = squareMethod(numberList)
-    if checkForBoolean(squaredNumbers)
-  } yield squaredNumbers
-  oddSquare.sum
+    numberList <- numberList //iterate over the list
+    squaredNumbers = squareMethod(numberList) //calculate square (each value). Need to use = as the squareMethod
+    if checkForBoolean(squaredNumbers) //use an if guard, filter and keep only the odd values of squaredNumbers
+  } yield squaredNumbers // collect all the odd squares
+  oddSquare.sum // sum filtered odd squares by calling your val
 }
 sumOfOddAndSquared(numbers)
 

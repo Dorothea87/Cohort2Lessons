@@ -3,7 +3,9 @@
  2. Expand on your basic terminal interaction from above. Have a small conversation given
  specific inputs (this can be about anything you like; weather, films, sports…) */
 package Week1Monday.Friday
+
 import scala.io.StdIn.readLine
+
 object FridayExtension extends App {
 
   println("Please enter your Name:")
