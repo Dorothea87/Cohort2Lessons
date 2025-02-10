@@ -23,4 +23,6 @@ object FamilyLogic extends App {
 
   // DOG
   val dog1: Dog = Dog.apply(new Name("Karl"), new Age(13), new HasFood(false))
+  println(dog1.name.name)
+  println(dog1.areYouHungry)
 }
