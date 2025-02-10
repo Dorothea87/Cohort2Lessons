@@ -2,7 +2,7 @@ package Week2.Monday.Library
 
 import Week2.Monday.Family.Adult
 
-class Book (val title: String, val autor:Adult) {
+class Book (val title: String, val author:Adult) extends ReadingFormat with Genre {
  def read: String = "Keep turning those pages."
 }
 
