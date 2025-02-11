@@ -1,6 +1,8 @@
 package Week2.Monday.Library
 
-class ReadingFormat
+class ReadingFormat {
+
+}
 
 trait Audiobook extends ReadingFormat //extending a class using the keyword extends. We can only extend 1 class per 'thing" (object, trait, class)
 

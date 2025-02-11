@@ -47,6 +47,6 @@ object FridayExtensionEx3 extends App {
     letterGrade(average)
   }
 
-  println(f"Your final Grade is: $finalGrade(String)")
-  println(s"Your final score is: $overallGrade")
+//  println(f"Your final Grade is: $finalGrade(String)")
+//  println(s"Your final score is: $overallGrade")
 }
