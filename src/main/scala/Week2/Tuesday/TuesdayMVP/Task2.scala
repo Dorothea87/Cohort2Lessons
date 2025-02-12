@@ -5,7 +5,7 @@ object Task2 extends App {
   //a) case class Person(name: String, age: Int, nationality: String, isStudent: Boolean) -> should run but at long as we do not make an instance and println it, we can't see anything
   case class Person(name: String, age: Int, nationality: String, isStudent: Boolean)
 
-  //b) val firstPerson = new Person("Carlos", 23, "Spanish", true) -> should run since it has all the necessary parameters to create a new person
+  //b) val firstPerson = new Person("Carlos", 23, "Spanish", true) -> should run since it has all the necessary parameters to create a new person, we wouldn't need the new keyword though
   val firstPerson = new Person("Carlos", 23, "Spanish", true)
   println(firstPerson)
 

@@ -16,7 +16,12 @@ object CaseClassesExtension extends App {
   println(bananaBread)
   println(bananaBread.name)
 
-  //case object NoRecipe extends Recipe("No name", 0, List())
+//  //case object NoRecipe extends Recipe("No name", 0, List())
+//  sealed trait Seasoning
+//  case object Salt extends Seasoning
+//  case object Pepper extends Seasoning
+//  case object Nutmeg extends Seasoning
+//  case object Cinnamon extends Seasoning
 
   //val copiedSpiderMan = spiderMan.copy(weakness = "Spider Slayer Squad")
   val copiedCarbonara1 = carbonara.copy(portions = 6)
