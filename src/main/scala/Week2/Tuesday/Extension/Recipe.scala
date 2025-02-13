@@ -7,21 +7,20 @@ package Week2.Tuesday.Extension
 
 object CaseClassesExtension extends App {
 
-  case class Recipe(name: String, portions: Int, ingredients: List[String])
+  sealed trait Seasoning
+  case object Salt extends Seasoning
+  case object Pepper extends Seasoning
+  case object Nutmeg extends Seasoning
+  case object Cinnamon extends Seasoning
 
-  val carbonara = Recipe.apply("Spaghetti Carbonara", 4, List("500g Spaghetti", "2 eggs", "100g Parmesan cheese", "200g pancetta"))
-  val dauphinoise = Recipe.apply("Dauphinoise", 6, List("500g potatoes", "2 eggs", "100g Comte cheese", "200ml double cream", "1 shallot"))
-  val bananaBread = Recipe.apply("Banana Bread", 8, List("3 large bananas", "3 eggs", "150g sugar", "150g butter", "150g soft white flour", "1.5 tsp baking powder"))
+  case class Recipe(name: String, portions: Int, ingredients: List[String], seasoning: Seasoning)
+
+  val carbonara = Recipe.apply("Spaghetti Carbonara", 4, List("500g Spaghetti", "2 eggs", "100g Parmesan cheese", "200g pancetta"), Pepper)
+  val dauphinoise = Recipe.apply("Dauphinoise", 6, List("500g potatoes", "2 eggs", "100g Comte cheese", "200ml double cream", "1 shallot"), Nutmeg)
+  val bananaBread = Recipe.apply("Banana Bread", 8, List("3 large bananas", "3 eggs", "150g sugar", "150g butter", "150g soft white flour", "1.5 tsp baking powder"), Salt)
 
   println(bananaBread)
   println(bananaBread.name)
-
-//  //case object NoRecipe extends Recipe("No name", 0, List())
-//  sealed trait Seasoning
-//  case object Salt extends Seasoning
-//  case object Pepper extends Seasoning
-//  case object Nutmeg extends Seasoning
-//  case object Cinnamon extends Seasoning
 
   //val copiedSpiderMan = spiderMan.copy(weakness = "Spider Slayer Squad")
   val copiedCarbonara1 = carbonara.copy(portions = 6)
