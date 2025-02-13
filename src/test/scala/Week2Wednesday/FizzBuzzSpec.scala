@@ -22,13 +22,15 @@ class FizzBuzzSpec extends AnyFlatSpec{
 
   }
 
-//  "fizzBuzz" should "return 'Fizz' if the input number x can be divided by 3" in {
-//    assert(fizzBuzz.fizzBuzz(3) == "Fizz")
-//
-//  }
+//edge cases (error catching)
 
-  "fizzBuzz" should "return x as a string  if not divisible by 3 or 5" in {
+  "fizzBuzz" should "return x as a string if not divisible by 3 or 5" in {
     assert(fizzBuzz.fizzBuzz(13) == "13")
+
+  }
+
+  "fizzBuzz" should "return 0 if 0 is the original number" in {
+    assert(fizzBuzz.fizzBuzz(0) == "0")
 
   }
 
