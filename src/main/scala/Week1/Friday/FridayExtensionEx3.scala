@@ -4,7 +4,7 @@
  a. When prompted in terminal, input the score for each subject.
  b. See the final grade printed to the terminal as a whole number. */
 
-package Week1Monday.Friday
+package Week1.Friday
 
 import scala.io.StdIn.readLine
 

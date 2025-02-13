@@ -2,7 +2,7 @@
  command line return “Hello X”, where X is a given name.
  2. Expand on your basic terminal interaction from above. Have a small conversation given
  specific inputs (this can be about anything you like; weather, films, sports…) */
-package Week1Monday.Friday
+package Week1.Friday
 
 import scala.io.StdIn.readLine
 
