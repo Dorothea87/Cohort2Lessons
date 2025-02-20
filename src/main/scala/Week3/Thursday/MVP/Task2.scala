@@ -1,6 +1,7 @@
 package Week3.Thursday.MVP
 
 import Week2.Monday.MondayMVP.Animal
+import Week3.Thursday.Options.Pizza
 //2)
 //a) Create a sealed trait called ‘Animal’.
 //b) Create different Animals that extend the Animal trait from 2a. We are going to pattern match in 2c so consider how are going to allow for an exhaustive match.
@@ -31,4 +32,8 @@ object Task2 extends App {
       case _ => "Sorry, I don't have a fun fact for these animals. Please, choose from: Dog, Cat, Budgie, Chameleon or Bunny."
     }
   }
+
+  val aDog = Dog()
+
+  println(returnAnimalFact(aDog))
 }
