@@ -12,41 +12,43 @@ import java.time.temporal.ChronoUnit
 
 object Task3 extends App {
 
-  case class Person (
-                    fullName: String,
-                    dateOB: LocalDate,
-                    occupation: Option[String],
-                    lastCountryLivedIn: String,
-                    dateOfDeath: Option[LocalDate],
-                    age: Int,
-                    starSign: String,
-                    ageOfDeath: Option[Int]
-                    )
-  case class InputPerson (
-                           fullName: String,
-                           dateOB: LocalDate,
-                           occupation: Option[String],
-                           lastCountryLivedIn: String,
-                           dateOfDeath: Option[LocalDate]
-                         )
-  val inputperson1: InputPerson = InputPerson("Peter Parker", LocalDate.parse("2001-08-23"), Some("Photographer"), "USA", None)
+  case class Person(
+                     fullName: String,
+                     dateOB: LocalDate,
+                     occupation: Option[String],
+                     lastCountryLivedIn: String,
+                     dateOfDeath: Option[LocalDate],
+                     age: Int,
+                     starSign: String,
+                     ageOfDeath: Option[Int]
+                   )
 
+  case class InputPerson(
+                          fullName: String,
+                          dateOB: LocalDate,
+                          occupation: Option[String],
+                          lastCountryLivedIn: String,
+                          dateOfDeath: Option[LocalDate]
+                        )
+
+  val inputperson1: InputPerson = InputPerson("Peter Parker", LocalDate.parse("2001-08-23"), Some("Photographer"), "USA", None)
 
 
   def createPerson(inputPerson: InputPerson): Person = {
     val age = calculateAge(inputPerson.dateOB, inputPerson.dateOfDeath)
-    val ageOfDeath = inputPerson.dateOfDeath.map(deathDate => calculateAge(inputPerson.dateOB, Some(deathDate))
+    val ageOfDeath = inputPerson.dateOfDeath.map(deathDate => calculateAge(inputPerson.dateOB, Some(deathDate)))
+    val starSign = determineStarSign(inputPerson.dateOB)
 
-    Person(
-      inputPerson.fullName,
-      inputPerson.dateOB,
-      inputPerson.occupation,
-      inputPerson.lastCountryLivedIn,
-      inputPerson.dateOfDeath,
-      age,
-      starSign,
-      ageOfDeath
-    )
+      Person(
+        inputPerson.fullName,
+        inputPerson.dateOB,
+        inputPerson.occupation,
+        inputPerson.lastCountryLivedIn,
+        inputPerson.dateOfDeath,
+        age,
+        starSign,
+        ageOfDeath
+      )
   }
 
   def calculateAge(birthDate: LocalDate, deathDate: Option[LocalDate]): Int = {
@@ -85,5 +87,9 @@ object Task3 extends App {
       case _ => "Unknown"
     }
   }
+
+  println(inputperson1)
+  val person1 = createPerson(inputperson1)
+  println(person1)
 
 }
