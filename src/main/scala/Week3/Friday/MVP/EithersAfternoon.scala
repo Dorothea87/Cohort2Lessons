@@ -43,14 +43,14 @@ case class Letter(name: Name, postcode: Postcode)
 //• Pass in two `String`s called `maybeName` and `maybePostCode`
 //• Using a for comprehension, use the methods `nameOrError` and `postcodeOrError` to create a `Letter`.
 //• Carefully consider what the return type of the `letterOrError` method should be!
-object Letter {
-  def letterOrError(maybeName: String, maybePostcode: String): Either [GenericPostageError, Letter] = {
-    for {
-      postcode <- postcodeResult
-      name <- nameResult
-    } yield Letter(name, postcode)
-  }
-}
+//object Letter {
+//  def letterOrError(maybeName: String, maybePostcode: String): Either [GenericPostageError, Letter] = {
+//    for {
+//      postcode <- postcodeResult
+//      name <- nameResult
+//    } yield Letter(name, postcode)
+//  }
+//}
 
 //3. Create a trait called `GenericPostageError`
 //• Give it a parameter method `message` with a type `String`

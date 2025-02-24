@@ -38,7 +38,7 @@ val letter: Right[Nothing, Letter] = Right(Letter(Name("Dorothea"), Postcode("SW
   //postcode
   //• `val letterAllValid`: A letter constructed with a valid name and an valid postcode
 
-  val letterWithANumberInName
+//  val letterWithANumberInName
   //13. Print the values above, are the error messages and types what you expected? Which error
   //was printed out for `val letterAllInvalid`? Why?
 }
