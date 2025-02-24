@@ -49,22 +49,22 @@ object Tasks3and4 extends App {
   //right should be a string that says is not odd, left should be true
   //incorporate edge cases like 0 or numbers higher than numbers in list
 
-//  val intList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
-//
-//  def isEven(index: Int, lst: List[Int]): Either[String, List[Boolean]] = {
-//    if (index < 0 || index > lst.length) {
-//      Left("This is an invalid Int, must be either more than 0 or less than 21.")
-//    } else {
-//        if (lst(index) % 2 == 0) {
-//          Right(true)
-//        } else {
-//          Right(false)
-//        }
-//    }
-//
-//  }
-//  println(isEven(5, intList))
-////}
+  //  val intList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+  //
+  //  def isEven(index: Int, lst: List[Int]): Either[String, List[Boolean]] = {
+  //    if (index < 0 || index > lst.length) {
+  //      Left("This is an invalid Int, must be either more than 0 or less than 21.")
+  //    } else {
+  //        if (lst(index) % 2 == 0) {
+  //          Right(true)
+  //        } else {
+  //          Right(false)
+  //        }
+  //    }
+  //
+  //  }
+  //  println(isEven(5, intList))
+  ////}
 
   val intList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 
@@ -75,13 +75,14 @@ object Tasks3and4 extends App {
       Left("This index is out of bounds.")
     } else {
       val currentResult = lst(index) % 2 == 0
-     isEven(index - 1, lst) match {
-       case Right(results) => Right(currentResult :: results)
-       case Left(error) => Left(error)
-     }
+      isEven(index - 1, lst) match {
+        case Right(results) => Right(currentResult :: results)
+        case Left(error) => Left(error)
+      }
     }
   }
-println(isEven(5, intList))
-println(isEven(25, intList))
-println(isEven(19, intList))
+
+  println(isEven(5, intList))
+  println(isEven(25, intList))
+  println(isEven(19, intList))
 }
