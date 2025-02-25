@@ -52,4 +52,18 @@ object AfternoonTasks extends App {
   println(stringConverter(testString, true))
   println(stringConverter(testString, false))
 
+  //4 a. Create a `calculate` method that takes an input called `operation: String` and pattern matches it to return one previously written methods from question 2; ‘add’, ‘subtract’, ‘multiply’, and ‘divide’. (Example: calculate(“add”) will return the add method from Q2)
+  def calculate(operation: String): (Double, Double) => Double = {
+    //insert pattern matching here
+    operation match {
+      case "add" => addition
+      case "subtract" => subtraction
+      case "multiply" => multiplication
+      case "divide" => division
+    }
+  }
+  //b. Try applying different string inputs to the calculate method to return each of the arithmetic methods.
+  println(calculate("add")(1.0, 5,0))
+  //c. What happens if you enter an input that doesn’t match any of the methods? Should we account for this in our pattern match? What would change if we did?
+
 }
