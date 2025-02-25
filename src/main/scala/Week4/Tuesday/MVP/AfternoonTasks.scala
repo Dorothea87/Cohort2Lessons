@@ -17,17 +17,39 @@ object AfternoonTasks extends App {
 
   //2 a. Create 4 functions (addition, multiplication, division, subtraction), each take two doubles as inputs and return a Double as the result.
   def addition(x: Double, y: Double): Double = x + y
+
   def subtraction(x: Double, y: Double): Double = x - y
+
   def multiplication(x: Double, y: Double): Double = x * y
+
   def division(x: Double, y: Double): Double = x / y
 
   //b. Create a function called 'IntManipulator' that takes in two doubles, and a mathematical operation (as made above) as a function and returns the result as a double.
-  def intManipulator(num1: Double, num2: Double, function: (Double,Double) => Double): Double = function(num1, num2)
+  def intManipulator(num1: Double, num2: Double, function: (Double, Double) => Double): Double = function(num1, num2)
 
   println(intManipulator(5.0, 3.0, addition))
   println(intManipulator(5.0, 3.0, subtraction))
   println(intManipulator(5.0, 3.0, multiplication))
   println(intManipulator(5.0, 3.0, division))
 
+  //3 a. Create a function called `convertToUpperCase` that take any string input and returns that string as uppercase.
+  def convertToUpperCase(input: String): String = input.toUpperCase
+
+  //b. Create a function called `convertToLowerCase` that take any string input and returns that string as lowercase.
+  def convertToLowerCase(input: String): String = input.toLowerCase
+
+  //c. Create a third function called `stringConverter` that takes a Boolean input with parameter name `makeStringUpperCase`. If the input is 'true' return the upperCase method, if false return the lowerCase method.
+  def stringConverter(input: String, makeStringUpperCase: Boolean): String = {
+    if (makeStringUpperCase) {
+      convertToUpperCase(input)
+    } else {
+      convertToLowerCase(input)
+    }
+  }
+
+  //d. Copy `val testString = “cOnVeRtMe”` and apply your convertString method to your testString and print the result when the input is ‘true’ and when it is ‘false’.
+  val testString = "cOnVeRtMe"
+  println(stringConverter(testString, true))
+  println(stringConverter(testString, false))
 
 }
