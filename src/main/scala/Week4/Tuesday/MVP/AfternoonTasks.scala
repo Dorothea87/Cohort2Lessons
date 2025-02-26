@@ -63,8 +63,19 @@ object AfternoonTasks extends App {
     }
   }
   //b. Try applying different string inputs to the calculate method to return each of the arithmetic methods.
+  val addFunc = calculate("add")
+  val subtractFunc = calculate("subtract")
+  val multiplyFunc = calculate("multiply")
+  val divideFunc = calculate("divide")
 
-  println(calculate("add")(1.0, 5,0))
   //c. What happens if you enter an input that doesn’t match any of the methods? Should we account for this in our pattern match? What would change if we did?
-
+  def calculateWithEitherReturn(operation: String): Either[String, (Double, Double) => Double]  = {
+    operation match {
+      case "add" => Right(addition)
+      case "subtract" => Right(subtraction)
+      case "multiply" => Right(multiplication)
+      case "divide" => Right(division)
+      case _ => Left("Enter a valid method; add, subtract, multiply or divide.")
+    }
+  }
 }
