@@ -9,7 +9,7 @@ object AfternoonTasks extends App {
   //i. The first parameters is an `input:Int`.
   //ii. The second parameter is a function called `f` that takes an `Int` and returns an `Int`. (Having this as parameter makes the `applyTwice` method a higher order function.)
   //iii. The `applyTwice` function must apply `f` twice in succession to the `input`.
-  def applyTwice(input: Int, f: Int => Int): Int = f(input) * 2
+  def applyTwice(input: Int, f: Int => Int): Int = f(f(input))
 
   //c. Call the `applyTwice` function passing in the ` intDoubler ` as your `f`. (E.g. applyTwice(4, intDoubler) should equal 16)
   println(applyTwice(4, intDoubler))
@@ -63,6 +63,7 @@ object AfternoonTasks extends App {
     }
   }
   //b. Try applying different string inputs to the calculate method to return each of the arithmetic methods.
+
   println(calculate("add")(1.0, 5,0))
   //c. What happens if you enter an input that doesn’t match any of the methods? Should we account for this in our pattern match? What would change if we did?
 
