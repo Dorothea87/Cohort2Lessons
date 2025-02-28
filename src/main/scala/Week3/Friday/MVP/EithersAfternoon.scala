@@ -19,7 +19,7 @@ case class Name(value: String)
 object Name {
   def nameOrError(maybeName: String): Either[InvalidNameError, Name] = {
     if (maybeName.exists(_.isDigit))
-      Left(InvalidNameError("This is an invalid Name"))
+      Left(InvalidNameError("This is an invalid name"))
     else Right(Name(maybeName))
   }
 }
@@ -126,7 +126,7 @@ object EitherLogic extends App {
   //• Any letter is fine to return here.
   //• Add in a sleep thread of 2 milliseconds. What happens?
   def fetchLetter: Future[Letter] = Future {
-    Thread.sleep(10000000)
+    Thread.sleep(1000)
     newLetter
   }
 
